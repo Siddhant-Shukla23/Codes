@@ -23,10 +23,13 @@ public:
                         
                     }
                     else if(num[low]+num[high]<sum){
+                        while(low<high && num[low]==num[low+1]) low++;
                        low++;
                         
                 }
-                    else  high--;
+                    else  {
+                        while(low<high && num[high]==num[high-1]) high--;
+                        high--;}
                         
             }
             }
